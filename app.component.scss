@@ -1,0 +1,27 @@
+
+.nav.nav-tabs li {
+  background-color: green;
+  color: black;
+  display: inline-block;
+  padding: 12px;
+  text-decoration: blink;
+  text-align: justify;
+  position: relatlive;
+ font-size: medium;
+//  margin-right: 15px;
+}
+
+.nav.nav-tabs a {
+  text-decoration:none;
+
+}
+
+.nav.nav-tabs li:hover {
+  background-color: #ccc;
+}
+
+.nav.nav-tabs a.active {
+  background-color: #4CAF50;
+  color: white;
+  
+}

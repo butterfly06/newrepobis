@@ -1,0 +1,39 @@
+
+
+<p name="eric">
+  {{text}}
+</p>
+
+<input type="text" maxlength="5" #name (click)="name.focus()" placeholder="search">
+<button (click)="name.focus()">Search</button>
+<option selected>Rainbow Dash</option>
+<option selected="false">Rainbow Dash</option>
+
+<h2>Sign up</h2>
+<form (ngSubmit)="submit(userForm.value)" #userForm="ngForm">
+
+  <div>
+    <label>Username*</label>
+  <p>
+    <input name="username" ngModel required maxlength="10"  #username=
+    "ngModel">
+  </p>
+    <div *ngIf="username.dirty && username.hasError('required')">Username is
+      required
+    </div>
+  </div>
+  <div>
+    <label>Password*</label>
+    <p>
+    <input type="password" name="password" ngModel required
+                                  #password="ngModel">
+                                </p>
+    <div *ngIf="password.dirty && password.hasError('required')">Password is
+      required</div>
+  </div>
+  
+  <div><label>Message: </label>
+  <p><textarea type="text" name="message" ></textarea></p>
+  </div>
+  <button type="submit" [disabled]="userForm.invalid" > submit</button>
+</form>
