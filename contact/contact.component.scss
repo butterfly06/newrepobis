@@ -26,3 +26,14 @@ textarea {
   title {
     background: grey; 
   }
+
+  input {
+    display: inline;
+    width: 100px;
+    padding: 5px;
+    border: 1px solid blue;
+    background-color: white;
+  }
+  input.ng-invalid {
+    border: 3px red solid;
+  }
